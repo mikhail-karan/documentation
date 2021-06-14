@@ -16,7 +16,7 @@ DigitalOcean is a cloud platform that helps to deploy and scale applications by 
 :::warning PREREQUISITES
 A DigitalOcean account is necessary to follow this installation guide. If you do not already have one, you can use [this referral link](https://try.digitalocean.com/strapi/) to get \$100 of free credits!
 :::
-## Creating a Strapi project with DigitalOcean
+## Creating a Strapi project
 
 1. Go to the [Strapi page on DigitalOcean's marketplace](https://marketplace.digitalocean.com/apps/strapi).
 2. Click on **Create Strapi Droplet** button.
@@ -40,13 +40,6 @@ To visit your Strapi application:
 
 <!-- TODO: Check this 👇 - We didn't mention this in other guides. Is it specific to DigitalOcean, or should we simply remove it? -->
 Visiting the Strapi application page for the first time will require to create the first administrator user.
-
-
-::: tip TIP
-You can also SSH into the virtual machine using `root` as the SSH user and your public ipv4 address. There is no password for SSH as DigitalOcean uses SSH keys by default with password authentication disabled.
-:::
-
-
 
 ## Configuring the Strapi application
 
@@ -189,7 +182,7 @@ where `<your-new-password>` should be replaced by the password you want to use.
 4. Update the `/srv/strapi/strapi-development/.env` file with the new password:
 
 ```
-DATABASE_PASSWORD=your-new-password
+DATABASE_PASSWORD=<your-new-password>
 ```
 
 5. Restart Strapi and confirm the password change was successful, by running these commands:
